@@ -1,6 +1,5 @@
-import {By, until} from 'selenium-webdriver';
+import {By} from 'selenium-webdriver';
 import BasePage from './base-page.js';
-import config from 'config';
 
 const sideBarHeadingSelector = By.css( '.sidebar__heading' );
 
@@ -14,9 +13,7 @@ export default class ReaderPage extends BasePage {
 	}
 
 	async get() {
-		await this.driver.wait( until.elementIsVisible(
-			this.driver.findElement( sideBarHeadingSelector ) ), config.get( 'explicitWaitMS' ) );
-
+		await this.waitUntilElementIsNotVisible( sideBarHeadingSelector );
 	}
 
 	async openProfile() {

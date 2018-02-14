@@ -10,7 +10,6 @@ Automated end-to-end acceptance tests for the [wp-desktop](https://github.com/Au
 
 ```
 brew install node #MacOS
-
 ```
 
 ### Install dependencies

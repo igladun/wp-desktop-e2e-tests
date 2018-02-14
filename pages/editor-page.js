@@ -1,12 +1,10 @@
-import {By, until} from 'selenium-webdriver';
+import {By} from 'selenium-webdriver';
 import BasePage from './base-page.js';
-import config from 'config';
 
 const postTitleSelector = By.css( '.textarea-autosize.editor-title__input' );
 const postBodySelector = By.css( '#tinymce' );
 const publishButtonSelector = By.css( '.button.editor-publish-button.is-primary' );
 const publishNowButtonSelector = By.xpath( '//button[text()="Publish!"]' );
-
 
 export default class EditorPage extends BasePage {
 
@@ -15,9 +13,7 @@ export default class EditorPage extends BasePage {
 	}
 
 	async get() {
-		await this.driver.wait( until.elementIsVisible(
-			this.driver.findElement( postTitleSelector ) ), config.get( 'explicitWaitMS' ) );
-
+		await this.waitUntilElementIsNotVisible( postTitleSelector );
 	}
 
 	async writePost( title, text ) {
@@ -32,6 +28,6 @@ export default class EditorPage extends BasePage {
 		await this.clickWhenVisible( publishButtonSelector );
 		await this.clickWhenVisible( publishNowButtonSelector );
 
-		}
+	}
 
 }

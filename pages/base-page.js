@@ -6,6 +6,11 @@ export default class BasePage {
 		this.driver = driver;
 	}
 
+	async waitUntilElementIsNotVisible( locator ) {
+		await this.driver.wait( until.elementIsVisible(
+			this.driver.findElement( locator ) ), config.get( 'explicitWaitMS' ) );
+	}
+
 	async clickWhenVisible( locator ) {
 		await this.driver.wait( until.elementIsVisible(
 			this.driver.findElement( locator ) ), config.get( 'explicitWaitMS' ) );

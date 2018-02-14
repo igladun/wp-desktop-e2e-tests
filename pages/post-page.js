@@ -14,9 +14,7 @@ export default class PostPage extends BasePage {
 	}
 
 	async get() {
-		await this.driver.wait( until.elementIsVisible(
-			this.driver.findElement( editButtonSelector ) ), config.get( 'explicitWaitMS' ) );
-
+		await this.waitUntilElementIsNotVisible( editButtonSelector );
 	}
 
 	async checkPost( title, text ) {

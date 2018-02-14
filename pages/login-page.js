@@ -1,4 +1,4 @@
-import {By, until} from 'selenium-webdriver';
+import {By} from 'selenium-webdriver';
 import BasePage from './base-page.js';
 import config from 'config';
 
@@ -13,8 +13,7 @@ export default class LoginPage extends BasePage {
 	}
 
 	async get() {
-		await this.driver.wait( until.elementIsVisible(
-			this.driver.findElement( userNameSelector ) ), config.get( 'explicitWaitMS' ) );
+		await this.waitUntilElementIsNotVisible( userNameSelector );
 	}
 
 	async login() {
