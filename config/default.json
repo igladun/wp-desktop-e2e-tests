@@ -2,7 +2,7 @@
   "path": "/Applications/WordPress.com.app/Contents/MacOS/WordPress.com",
   "pathToSettings": "/Users/igorgladun/Library/Application Support/WordPress.com",
   "explicitWaitMS": 20000,
-  "processKillStartWait": 4000,
+  "processKillStartWaitMS": 4000,
   "mochaTimeoutMS": 40000,
   "username": "login",
   "password": "pass"
