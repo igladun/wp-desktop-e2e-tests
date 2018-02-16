@@ -26,5 +26,9 @@ In `config/default.json` change next :
 * `username` your WordPress.com username
 * `username` your WordPress.com password
 
+For the user, used in the tests:
+ * must be at least 1 site
+ * `Show publish confirmation` option must be enabled. To enable it, navigate to [https://wordpress.com/settings/writing](https://wordpress.com/settings/writing) and under `Composing` enable `Show publish confirmation`. 
+
 ## Running tests
 `npm test`
