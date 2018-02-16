@@ -7,7 +7,7 @@ import ProfilePage from '../pages/profile-page';
 describe( 'Logging In and Out:', function() {
 	let driver;
 	this.timeout( config.get( 'mochaTimeoutMS' ) );
-	this.bail( true );
+	this.bailSuite( true );
 
 	before( async function() {
 		this.timeout( config.get( 'mochaTimeoutMS' ) );

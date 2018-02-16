@@ -9,7 +9,7 @@ import {randomPhrase} from '../lib/helper';
 describe( 'Write a new post:', function() {
 	let driver;
 	this.timeout( config.get( 'mochaTimeoutMS' ) );
-	this.bail( true );
+	this.bailSuite( true );
 
 	before( async function() {
 		this.timeout( config.get( 'mochaTimeoutMS' ) );
